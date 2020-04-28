@@ -1,56 +1,26 @@
-        <div class="callout primary">
-            <div class="row column">
-              <h1>Hello! This is the portfolio of a very witty person.</h1>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla.</p>
-            </div>
-        </div>
-        <div class="row small-up-2 medium-up-3 large-up-4">
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-            <div class="column">
-              <img class="thumbnail" src="https://placehold.it/550x550">
-              <h5>My Site</h5>
-            </div>
-          </div>
+<div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+<button class="menu-icon" type="button" data-toggle></button>
+<div class="title-bar-title">Home</div>
+</div>
+<div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+<div class="tob-bar-left"><a href="/">Home</a></div>
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li class="menu-text show-for-large">
+            </li>
+            <li>
+            <?php// if(!isset($_SESSION['admin'])): ?>
+                <a href="/index/login">Login</a>
+                <li><a href="#">Registration</a></li>
+            <?php //else:?>
+                <a href="/index/logout">Log out 
+                <?php // echo $_SESSION['admin']->username?></a>
+            <?php // endif;?>
+                </li>
+            <?php //if(isset($_SESSION['admin'])):?>
+                <li><a href="#">My account</a></li>
+                <li><a href="#">Managment</a></li>
+            <?php // endif; ?>
+        </ul>
+    </div>
+</div>

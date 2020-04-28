@@ -2,7 +2,7 @@
 
 return [
     'nameAPP' => 'zadatak',
-    'url' => 'http://zadatak.hr',
+    'url' => 'http://zadatak.hr/',
     'dev'=> true,
     'db'=>[
         'server'=>'localhost',
@@ -10,4 +10,4 @@ return [
         'user'=>'spoljar',
         'password'=>'matija'
     ]
-]
+    ];
