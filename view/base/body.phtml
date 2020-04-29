@@ -9,18 +9,18 @@
             <li class="menu-text show-for-large">
             </li>
             <li>
-            <?php// if(!isset($_SESSION['admin'])): ?>
+            <?php if(!isset($_SESSION['user'])): ?>
                 <a href="/index/login">Login</a>
-                <li><a href="#">Registration</a></li>
-            <?php //else:?>
+                <li><a href="/index/register">Registration</a></li>
+            <?php else:?>
                 <a href="/index/logout">Log out 
-                <?php // echo $_SESSION['admin']->username?></a>
-            <?php // endif;?>
+                <?php  echo $_SESSION['user']->user_name?></a>
+            <?php  endif;?>
                 </li>
-            <?php //if(isset($_SESSION['admin'])):?>
-                <li><a href="#">My account</a></li>
+            <?php if(isset($_SESSION['user'])):?>
+                <li><a href="/index/account">My account</a></li>
                 <li><a href="#">Managment</a></li>
-            <?php // endif; ?>
+            <?php  endif; ?>
         </ul>
     </div>
 </div>

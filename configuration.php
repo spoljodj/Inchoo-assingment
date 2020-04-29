@@ -6,7 +6,7 @@ return [
     'dev'=> true,
     'db'=>[
         'server'=>'localhost',
-        'base'=>'Zadatak',
+        'base'=>'picdatabase',
         'user'=>'spoljar',
         'password'=>'matija'
     ]

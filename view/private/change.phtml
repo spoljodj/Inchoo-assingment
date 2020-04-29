@@ -1,0 +1,37 @@
+<form class="log-in-form" method="POST"
+action="/index/update">
+ <label>Email
+    <input type="email" id="email" name="email" value="<?php 
+    echo $user->email;
+    ?>">
+  </label>
+  
+  <label>Name
+    <input type="text" id="user_name" name="user_name" 
+    value="<?php 
+    echo $user->user_name;
+    ?>">
+  </label>
+
+  <label>Password
+    <input type="password" id="password" name="password">
+  </label>
+
+  <label>Password again
+    <input type="password" id="passwordagain" name="passwordagain">
+  </label>
+
+  <div class="grid-x grid-margin-x">
+    <div class="large-6 cell">
+      <a href="/index/account" 
+      class="alert button expanded">Quit changing</a>
+    </div>
+    <div class="large-6 cell">
+      <input type="submit" class="button expanded" 
+      value="Change info"></input>
+    </div>
+  </div>
+  <input type="hidden" name="user_id" 
+  value="<?php $user->user_id ?>">
+</form>
+<?php echo $msg; ?>

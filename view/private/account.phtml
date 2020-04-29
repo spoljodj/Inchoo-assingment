@@ -1,0 +1,14 @@
+
+<div class="card-user-container">
+
+
+ <div class="card-user-bio">
+    <h2><?php echo $_SESSION['user']->user_name; ?></h2>
+    <h3><?php echo $_SESSION['user']->email; ?></h3>
+    <a href="/index/change?user_id=<?php echo $_SESSION['user']->user_id ?>">
+    <i title="Change" class="fas fa-edit fa-2x"></i></a> 
+    <p></p>
+
+
+  
+ 
