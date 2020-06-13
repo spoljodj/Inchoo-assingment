@@ -30,4 +30,17 @@ class User
         unset($_POST['passwordagain']);
         $value->execute($_POST);
     }
+
+    public static function delete()
+    {
+        try{
+        $connection= DB::getInstance();
+        $value=$connection->prepare('delete from user where user_id=:user_id');
+        $value->execute($_GET);
+        }catch(PDOException $e){
+            echo $e->getMessage();
+            return false;
+        }
+        return true;
+    }
 }

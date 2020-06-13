@@ -100,6 +100,20 @@ class IndexController extends Controller
     {
         User::update();
         header('location: /index/account');
+        session_reset();
+    }
+
+    public function delete()
+    {
+        User::delete();
+        unset($_SESSION['user']);
+        session_destroy();
+        $this->index();
+    }
+
+    public function test()
+    {
+        $this->view->render('test');
     }
 
     
