@@ -78,7 +78,9 @@ class IndexController extends Controller
 
     public function account()
     {
-        $this->view->render($this->viewDir . 'account');
+        $this->view->render($this->viewDir . 'account' , [
+            'user'=>User::read($_GET['user_id'])
+        ]);
     }
 
     public function change()
@@ -99,7 +101,7 @@ class IndexController extends Controller
     public function update()
     {
         User::update();
-        header('location: /index/account');
+        header('location: /index');
         session_reset();
     }
 

@@ -1,0 +1,13 @@
+<?php
+if(isset($_POST['remember'])){
+if($_POST['remember']=='1' || $_POST['remember']=='on')
+                    {
+                    $time = time() + 3600 * 24 * 7;
+                    setcookie('email', $_POST['email'], $time);
+                    }
+                }
+?>
+
+<div>
+<a href="/account/picupload">Upload a picture</a>
+</div>

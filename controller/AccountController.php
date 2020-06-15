@@ -7,7 +7,7 @@ class AccountController extends AuthorizationController
 
     function index()
     {
-        $this->view->render($this->viewDir . 'account');
+        $this->view->render($this->viewDir . 'dashboard');
     }
 
     public function updateprofile()

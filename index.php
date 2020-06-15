@@ -1,4 +1,5 @@
 <?php 
+
 session_start();
 define('BP',__DIR__ . DIRECTORY_SEPARATOR);
 
@@ -31,3 +32,4 @@ spl_autoload_register(function($class)
 
 //require_once 'vendor/autoload.php';
 App::start();
+

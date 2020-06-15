@@ -1,11 +1,16 @@
 <form class="log-in-form" method="POST"
 action="/index/authorization">
  <label>Email
-    <input type="email" id="email" name="email" value="<?php echo $email ?>">
+    <input type="email" id="email" name="email" value="<?php if(isset($_COOKIE['email'])){
+      echo $_COOKIE['email'];
+    }else{ echo $email;} ?>">
   </label>
   <label>Password
     <input type="password" id="password" name="password">
   </label>
+  <fieldset class="fieldset">
+  <input id="remember" name="remember" type="checkbox"><label for="remember">Remember me</label>
+</fieldset>
   <p><input type="submit" class="button expanded" value="Log in"></input></p>
 </form>
 
