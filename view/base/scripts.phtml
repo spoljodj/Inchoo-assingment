@@ -1,6 +1,9 @@
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="<?php echo APP::config('url'); ?>public/js/jquery.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>
       $(document).foundation();
     </script>
     <script src="https://kit.fontawesome.com/3b8c308efb.js" crossorigin="anonymous"></script>
+    <?php
+    if(isset($javascript)){echo $javascript . PHP_EOL;}
+    ?>

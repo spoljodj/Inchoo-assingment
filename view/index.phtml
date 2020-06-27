@@ -1,2 +1,11 @@
-Welcome
-Please login to use the websites functions
+<div>
+    <?php
+    if(!isset($_SESSION['user'])){
+        echo 'Welcome <br> Please login to use the websites functions';
+    }else{
+        echo 'Welcome <br>' . $_SESSION['user']->user_name;
+    }
+    ?>
+</div>
+<p id='picnmb'></p>
+<button type='button' class='button' id='picbtn'>Show the sum of all pics</button>

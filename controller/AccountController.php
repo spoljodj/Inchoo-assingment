@@ -15,4 +15,19 @@ class AccountController extends AuthorizationController
         User::updateprofile();
         $this->index();
     }
+
+    public function picupload()
+    {
+        $this->view->render($this->viewDir . 'picupload',['msg'=>'Upload your picture']);
+    }
+
+    public function upload()
+    {
+        if(isset($_FILES['picture'])){
+        User::upload();
+        $this->index();
+        }else{
+            $this->view->render($this->viewDir . 'picupload',['msg'=>'You have not selected a picture to upload']);
+        }
+    }
 }

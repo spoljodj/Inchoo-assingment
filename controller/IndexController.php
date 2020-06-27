@@ -6,7 +6,8 @@ class IndexController extends Controller
 
     public function index()
     {
-        $this->view->render('index');
+        $this->view->render('index',['javascript'=>'<script src="' . APP::config('url') . 
+        'public/js/picnumber.js"></script>']);
     }
 
     public function login()
@@ -118,5 +119,10 @@ class IndexController extends Controller
         $this->view->render('test');
     }
 
+    public function count()
+    {
+       header('Content-Type: application/json');
+       echo json_encode(User::countpic());
+    }
     
 }

@@ -18,7 +18,8 @@ create table user(
 
 create table album(
     picture_id      int not null primary key auto_increment,
-    posting_user    int not null
+    posting_user    int not null,
+    picture_name    varchar(100)
 );
 
 alter table album add foreign key(posting_user) references user(user_id);
